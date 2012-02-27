@@ -1,0 +1,14 @@
+  ___         ___         ___        ___        ___   
+/___ `\      / __`\      /'___\     /'___\     / __`\ 
+  __ \ \    /\ \_\ \    /\ \__/    /\ \__/    /\ \_\ \
+ /\ \_/ \   \ \____/    \ \____\   \ \____\   \ \____/
+ \/_____/    \/___/      \/____/    \/____/    \/___/ 
+
+# This is JOCCO #
+
+An unoffical port of Docco/Nocco/Marginalia/Locco/Shocco...
+the original quick-and-dirty, literate-programming-style
+documentation generator written in CoffeeScript.
+
+http://jashkenas.github.com/docco/
+
