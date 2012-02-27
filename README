@@ -12,3 +12,9 @@ documentation generator written in CoffeeScript.
 
 http://jashkenas.github.com/docco/
 
+Currently under developpement
+It use freemarker as the template generator tool
+It use MarkdownPaper as the markdowns processor
+It will use SHJS as the syntax highlighter
+
+
