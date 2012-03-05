@@ -1,0 +1,30 @@
+
+src/net/krilivye/jocco/DocumentationModel.java:8	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/net/krilivye/jocco/DocumentationModel.java:14	Parameter 'listOfFileModel' is not assigned and could be declared final
+src/net/krilivye/jocco/DocumentationModel.java:19	Parameter 'file' is not assigned and could be declared final
+src/net/krilivye/jocco/DocumentationModel.java:24	Parameter 'file' is not assigned and could be declared final
+src/net/krilivye/jocco/Jocco.java:26	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/net/krilivye/jocco/Jocco.java:27	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/net/krilivye/jocco/Jocco.java:47	Avoid unnecessary comparisons in boolean expressions
+src/net/krilivye/jocco/Jocco.java:59	Avoid if (x != y) ..; else ..;
+src/net/krilivye/jocco/Jocco.java:97	A method/constructor shouldn't explicitly throw java.lang.Exception
+src/net/krilivye/jocco/Jocco.java:97	A method/constructor shouldn't explicitly throw java.lang.Exception
+src/net/krilivye/jocco/Jocco.java:102	Avoid instantiating new objects inside loops
+src/net/krilivye/jocco/Jocco.java:135	Avoid printStackTrace(); use a logger call instead.
+src/net/krilivye/jocco/Jocco.java:143	Found 'DD'-anomaly for variable 'hascode' (lines '143'-'159').
+src/net/krilivye/jocco/Jocco.java:143	Found 'DU'-anomaly for variable 'hascode' (lines '143'-'165').
+src/net/krilivye/jocco/Jocco.java:149	Avoid assignments in operands
+src/net/krilivye/jocco/Jocco.java:149	Found 'DU'-anomaly for variable 'line' (lines '149'-'165').
+src/net/krilivye/jocco/Jocco.java:153	Found 'DD'-anomaly for variable 'hascode' (lines '153'-'159').
+src/net/krilivye/jocco/Jocco.java:153	Found 'DU'-anomaly for variable 'hascode' (lines '153'-'165').
+src/net/krilivye/jocco/Jocco.java:154	Avoid instantiating new objects inside loops
+src/net/krilivye/jocco/Jocco.java:155	Avoid instantiating new objects inside loops
+src/net/krilivye/jocco/Jocco.java:159	Found 'DD'-anomaly for variable 'hascode' (lines '159'-'159').
+src/net/krilivye/jocco/Jocco.java:159	Found 'DU'-anomaly for variable 'hascode' (lines '159'-'165').
+src/net/krilivye/jocco/Messages.java:28	A method should have only one exit point, and that should be the last statement in the method
+src/net/krilivye/jocco/Program.java:8	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/net/krilivye/jocco/Program.java:35	Avoid printStackTrace(); use a logger call instead.
+src/net/krilivye/jocco/Program.java:36	System.exit() should not be used in J2EE/JEE apps
+src/net/krilivye/jocco/Template.java:32	Avoid printStackTrace(); use a logger call instead.
+test/net/krilivye/jocco/JoccoTest.java:77	Found 'DD'-anomaly for variable 'execute' (lines '77'-'79').
+test/net/krilivye/jocco/JoccoTest.java:82	Avoid printStackTrace(); use a logger call instead.

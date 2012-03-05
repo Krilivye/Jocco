@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2012-03-05T22:48:53.723">
+<file name="src/net/krilivye/jocco/DocumentationModel.java">
+<violation beginline="8" endline="8" begincolumn="0" endcolumn="0" rule="BeanMembersShouldSerialize" ruleset="JavaBean Rules" package="net.krilivye.jocco" class="DocumentationModel" externalInfoUrl="http://pmd.sourceforge.net/rules/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="0" endcolumn="0" rule="MethodArgumentCouldBeFinal" ruleset="Optimization Rules" package="net.krilivye.jocco" class="DocumentationModel" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'listOfFileModel' is not assigned and could be declared final
+</violation>
+<violation beginline="19" endline="19" begincolumn="0" endcolumn="0" rule="MethodArgumentCouldBeFinal" ruleset="Optimization Rules" package="net.krilivye.jocco" class="DocumentationModel" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'file' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="0" endcolumn="0" rule="MethodArgumentCouldBeFinal" ruleset="Optimization Rules" package="net.krilivye.jocco" class="DocumentationModel" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'file' is not assigned and could be declared final
+</violation>
+</file>
+<file name="src/net/krilivye/jocco/Jocco.java">
+<violation beginline="26" endline="26" begincolumn="0" endcolumn="0" rule="BeanMembersShouldSerialize" ruleset="JavaBean Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="27" endline="27" begincolumn="0" endcolumn="0" rule="BeanMembersShouldSerialize" ruleset="JavaBean Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="47" endline="47" begincolumn="0" endcolumn="0" rule="SimplifyBooleanExpressions" ruleset="Design Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SimplifyBooleanExpressions" priority="3">
+Avoid unnecessary comparisons in boolean expressions
+</violation>
+<violation beginline="59" endline="65" begincolumn="0" endcolumn="0" rule="ConfusingTernary" ruleset="Design Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="97" endline="97" begincolumn="0" endcolumn="0" rule="SignatureDeclareThrowsException" ruleset="Type Resolution Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldn't explicitly throw java.lang.Exception
+</violation>
+<violation beginline="97" endline="97" begincolumn="0" endcolumn="0" rule="SignatureDeclareThrowsException" ruleset="Type Resolution Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldn't explicitly throw java.lang.Exception
+</violation>
+<violation beginline="102" endline="102" begincolumn="0" endcolumn="0" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
+Avoid instantiating new objects inside loops
+</violation>
+<violation beginline="135" endline="135" begincolumn="0" endcolumn="0" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="143" endline="159" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'hascode' (lines '143'-'159').
+</violation>
+<violation beginline="143" endline="165" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'hascode' (lines '143'-'165').
+</violation>
+<violation beginline="149" endline="149" begincolumn="0" endcolumn="0" rule="AssignmentInOperand" ruleset="Controversial Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#AssignmentInOperand" priority="3">
+Avoid assignments in operands
+</violation>
+<violation beginline="149" endline="165" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'line' (lines '149'-'165').
+</violation>
+<violation beginline="153" endline="159" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'hascode' (lines '153'-'159').
+</violation>
+<violation beginline="153" endline="165" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'hascode' (lines '153'-'165').
+</violation>
+<violation beginline="154" endline="154" begincolumn="0" endcolumn="0" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
+Avoid instantiating new objects inside loops
+</violation>
+<violation beginline="155" endline="155" begincolumn="0" endcolumn="0" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
+Avoid instantiating new objects inside loops
+</violation>
+<violation beginline="159" endline="159" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'hascode' (lines '159'-'159').
+</violation>
+<violation beginline="159" endline="165" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="net.krilivye.jocco" class="Jocco" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'hascode' (lines '159'-'165').
+</violation>
+</file>
+<file name="src/net/krilivye/jocco/Messages.java">
+<violation beginline="28" endline="28" begincolumn="0" endcolumn="0" rule="OnlyOneReturn" ruleset="Controversial Rules" package="net.krilivye.jocco" class="Messages" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#OnlyOneReturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+</file>
+<file name="src/net/krilivye/jocco/Program.java">
+<violation beginline="8" endline="41" begincolumn="0" endcolumn="0" rule="UseSingleton" ruleset="Design Rules" package="net.krilivye.jocco" class="Program" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UseSingleton" priority="3">
+All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+</violation>
+<violation beginline="35" endline="35" begincolumn="0" endcolumn="0" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="net.krilivye.jocco" class="Program" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="36" endline="36" begincolumn="0" endcolumn="0" rule="DoNotCallSystemExit" ruleset="J2EE Rules" package="net.krilivye.jocco" class="Program" externalInfoUrl="http://pmd.sourceforge.net/rules/j2ee.html#DoNotCallSystemExit" priority="3">
+System.exit() should not be used in J2EE/JEE apps
+</violation>
+</file>
+<file name="src/net/krilivye/jocco/Template.java">
+<violation beginline="32" endline="32" begincolumn="0" endcolumn="0" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="net.krilivye.jocco" class="Template" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="test/net/krilivye/jocco/JoccoTest.java">
+<violation beginline="77" endline="79" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="net.krilivye.jocco" class="JoccoTest" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'execute' (lines '77'-'79').
+</violation>
+<violation beginline="82" endline="82" begincolumn="0" endcolumn="0" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="net.krilivye.jocco" class="JoccoTest" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+</pmd>

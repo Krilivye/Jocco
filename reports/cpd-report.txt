@@ -1,0 +1,16 @@
+Found a 12 line (32 tokens) duplication in the following files: 
+Starting at line 25 of C:\Users\Krilivye-Homestation\workspace\Jocco\test\net\krilivye\jocco\ProgramTest.java
+Starting at line 37 of C:\Users\Krilivye-Homestation\workspace\Jocco\test\net\krilivye\jocco\JoccoTest.java
+
+	    fail("Expected IllegalArgumentException when argument is null"); //$NON-NLS-1$
+	} catch (final IllegalArgumentException expected) {
+	    Assert.assertEquals(Messages.getString("Program.main.null"), //$NON-NLS-1$
+		    expected.getMessage());
+	}
+    }
+
+    /**
+     * Test the setter with correct argument
+     */
+    @Test
+    public void testSetFilesWithAValidFileName() {

@@ -36,3 +36,5 @@ SCCS
 _$*
 _svn
 svn-commit*.tmp
+bin
+bin
