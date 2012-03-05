@@ -1,11 +1,4 @@
-	
-
-
-
-
-
-﻿<!DOCTYPE html />
-
+<!DOCTYPE html />
 <html>
 	<head>
 		<title>@Title</title>
@@ -46,11 +39,14 @@
 							<div class="pilwrap">
 								<a class="pilcrow" href="#section_@(i + 1)">&#182;</a>
 							</div>
-							${alist.docHTML}
+							${alist.name}
 						</td>
 						<td class="code">
-						<pre><code class='prettyprint'>${alist.codeHTML}</code></pre>
+						<#list alist.listOfSections as sections>
+						<pre><code class='prettyprint'>${sections.docHTML}</code></pre>
+						</#list>
 						</td>
+						
 					</tr>
 				</#list>
 				</tbody>

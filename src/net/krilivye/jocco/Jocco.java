@@ -31,7 +31,6 @@ public class Jocco {
 	 */
 	public Jocco() {
 		this.files = new ArrayList<File>();
-		// Nothing to do
 	}
 
 	/**
@@ -77,6 +76,7 @@ public class Jocco {
 	}
 
 	/**
+	 * This setter does not permit null value
 	 * @param fileOrDir
 	 *            a file or a dir name
 	 */
@@ -90,19 +90,28 @@ public class Jocco {
 	}
 
 	/**
-	 * @return true if the processus have been correctly executed, false
+	 * @return true if the process's have been correctly executed, false
 	 *         otherwise.
 	 * @throws Exception
 	 */
 	public boolean generateDoc() throws Exception {
 		Writer fileout = new FileWriter(new File("documentation.html")); //$NON-NLS-1$
+		Template template = new Template();
+		DocumentationModel docmodel= new DocumentationModel();
 		for (File file : this.files) {
+		    FileModel model = new FileModel();
 			List<Section> sections = parseFile(file);
 			MarkDownHiglight(sections);
-			Template template = new Template();
+			model.setListOfSections(sections);
+			model.setName(file.getName());
+			model.setExtension(file.getName());
+			
+			docmodel.add(model);
+			
 
-			fileout.write(template.fillTemplate(sections));
+			
 		}
+		fileout.write(template.fillTemplate(docmodel));
 		fileout.close();
 
 		return true;
@@ -138,7 +147,7 @@ public class Jocco {
 
 		String line;
 		while (null != (line = in.readLine())) {
-			if (line.contains("*")) { //$NON-NLS-1$
+			if (line.contains("*")|| line.contains("////")) { //$NON-NLS-1$
 				if (hascode) {
 					save(docsText, codeText);
 					hascode = false;

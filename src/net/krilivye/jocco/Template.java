@@ -42,15 +42,15 @@ public class Template {
 	 * @return the filled Template
 	 * @throws Exception
 	 */
-	public String fillTemplate(final List<Section> sections) throws Exception {
+	public String fillTemplate(final DocumentationModel model) throws Exception {
 		freemarker.template.Template temp = this.cfg.getTemplate("jocco.ftl"); //$NON-NLS-1$
 
 		// expose a "simple" java objects:
-		this.root.put("theList", sections); //$NON-NLS-1$
+		this.root.put("theList", model.getListOfFileModel()); //$NON-NLS-1$
 		Writer out = new StringWriter();
 		temp.process(this.root, out);
 		return out.toString();
-
+		
 	}
 
 }
