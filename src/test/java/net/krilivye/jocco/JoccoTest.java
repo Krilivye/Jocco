@@ -3,15 +3,17 @@ package net.krilivye.jocco;
 import static org.junit.Assert.fail;
 
 import java.io.File;
+import java.net.URL;
 
 import junit.framework.Assert;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class test the Jocco Test class.
- * 
  * @author Krilivye-Homestation
  */
 
@@ -19,12 +21,17 @@ public class JoccoTest {
 
     private transient Jocco jocco;
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(JoccoTest.class);
+
+    private transient URL testFile;
+
     /**
 	 * 
 	 */
     @Before
     public void setUp() {
         jocco = new Jocco();
+        testFile = getClass().getResource("test.html");
     }
 
     /**
@@ -46,9 +53,9 @@ public class JoccoTest {
      */
     @Test
     public void testSetFilesWithAValidFileName() {
-        final File test = new File("src/test/ressources/test.html"); //$NON-NLS-1$
-        jocco.setFiles("src/test/ressources/test.html"); //$NON-NLS-1$
-        Assert.assertTrue(jocco.getFiles().contains(test));
+
+        jocco.setFiles(testFile.getPath()); //$NON-NLS-1$
+        Assert.assertTrue(jocco.getFiles().contains(new File(testFile.getPath())));
 
     }
 
@@ -72,16 +79,16 @@ public class JoccoTest {
     @Test
     public void testGenerateDoc() {
 
-        jocco.setFiles("src/test/ressources/test.html"); //$NON-NLS-1$
+        jocco.setFiles(testFile.getPath()); //$NON-NLS-1$
 
-        boolean execute = false;
         try {
-            execute = jocco.generateDoc();
+            final boolean execute = jocco.generateDoc();
+            Assert.assertTrue(execute);
         } catch (final Exception e) {
             // Hardware IO may Occur
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
+            fail();
         }
 
-        Assert.assertTrue(execute);
     }
 }

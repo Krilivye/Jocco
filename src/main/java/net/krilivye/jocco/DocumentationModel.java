@@ -3,26 +3,41 @@ package net.krilivye.jocco;
 import java.util.Collection;
 import java.util.LinkedList;
 
-
+/**
+ * @author p.bousquie
+ */
 public class DocumentationModel {
 
-    private Collection<FileModel> listOfFileModel = new LinkedList<FileModel>();
+    private transient Collection<FileModel> listOfFileModel = new LinkedList<FileModel>();
 
+    /**
+     * @return a collection of fileModel representing the files documented
+     */
     public Collection<FileModel> getListOfFileModel() {
         return listOfFileModel;
     }
 
-    public void setListOfFileModels(Collection<FileModel> listOfFileModel) {
+    /**
+     * @param listOfFileModel
+     */
+    public void setListOfFileModels(final Collection<FileModel> listOfFileModel) {
         this.listOfFileModel = listOfFileModel;
 
     }
 
-    public void add(FileModel file) {
+    /**
+     * @param file
+     */
+    public void add(final FileModel file) {
         listOfFileModel.add(file);
 
     }
 
-    public boolean contains(FileModel file) {
+    /**
+     * @param file
+     * @return true if the DocumentationModel contain a file.
+     */
+    public boolean contains(final FileModel file) {
         return listOfFileModel.contains(file);
     }
 

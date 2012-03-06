@@ -35,7 +35,7 @@ public class Template {
         // Specify the data source where the template files come from.
         // Here I set a file directory for it:
         try {
-            cfg.setDirectoryForTemplateLoading(new File("src/main/ressources/")); //$NON-NLS-1$
+            cfg.setDirectoryForTemplateLoading(new File("src/main/resources/")); //$NON-NLS-1$
         } catch (final IOException e) {
             final Logger logger = LoggerFactory.getLogger(Template.class);
             logger.error(e.getLocalizedMessage());
@@ -48,15 +48,14 @@ public class Template {
 
     /**
      * @param model
-     *            a documentation model that will fill the template.
+     * a documentation model that will fill the template.
      * @return the filled Template
      * @throws IOException
-     *             on template file may occure
+     * on template file may occure
      * @throws TemplateException
-     *             if the template is not correctly made.
+     * if the template is not correctly made.
      */
-    public final String fillTemplate(final DocumentationModel model)
-            throws TemplateException, IOException {
+    public final String fillTemplate(final DocumentationModel model) throws TemplateException, IOException {
         final freemarker.template.Template temp = cfg.getTemplate("jocco.ftl"); //$NON-NLS-1$
 
         // expose a "simple" java objects:
