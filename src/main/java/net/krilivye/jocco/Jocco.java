@@ -33,7 +33,7 @@ public class Jocco {
     private static final Logger LOGGER = LoggerFactory.getLogger(Jocco.class);
 
     /**
-     * For Test interface
+     * For Test interface.
      */
     public Jocco() {
         files = new ArrayList<File>();
