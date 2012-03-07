@@ -437,7 +437,8 @@ import freemarker.template.TemplateException;
             files = new LinkedList<File>();
             addFiles(files, file);
         } else {
-            throw new IllegalArgumentException(Messages.getString("Program.main.illegal")); //$NON-NLS-1$
+            throw new IllegalArgumentException(
+                    Messages.getString("Program.main.illegal")); //$NON-NLS-1$
         }
     }
 
@@ -485,8 +486,9 @@ import freemarker.template.TemplateException;
 	              			</div>
 							<pre><code>/**
  * This setter does not permit null value
+ * 
  * @param fileOrDir
- * a file or a dir name
+ *            a file or a dir name
  */
 </code></pre>
 
@@ -494,7 +496,8 @@ import freemarker.template.TemplateException;
 						<td class="code">
 							<pre><code class='prettyprint'>    public void setFiles(final String fileOrDir) {
         if (fileOrDir == null) {
-            throw new IllegalArgumentException(Messages.getString("Program.main.null")); //$NON-NLS-1$
+            throw new IllegalArgumentException(
+                    Messages.getString("Program.main.null")); //$NON-NLS-1$
         }
         validate(fileOrDir);
 
@@ -510,7 +513,7 @@ import freemarker.template.TemplateException;
 	              			</div>
 							<pre><code>/**
  * @return true if the process's have been correctly executed, false
- * otherwise.
+ *         otherwise.
  * @throws IOException
  * @throws TemplateException
  */
@@ -527,8 +530,8 @@ import freemarker.template.TemplateException;
             final List<Section> sections = parseFile(file);
             markDownHiglight(sections);
             model.setListOfSections(sections);
-            model.setName(file.getName().split("\\.")[0]);
-            model.setExtension(file.getName().split("\\.")[1]);
+            model.setName(file.getName().split("\\.")[0]); //$NON-NLS-1$
+            model.setExtension(file.getName().split("\\.")[1]); //$NON-NLS-1$
 
             docmodel.add(model);
 
@@ -560,10 +563,10 @@ import freemarker.template.TemplateException;
         }
     }
 
-    private List<Section> parseFile(final File file) throws FileNotFoundException, IOException {
+    private List<Section> parseFile(final File file)
+            throws FileNotFoundException, IOException {
         listOfSections = new LinkedList<Section>();
         final BufferedReader input = new BufferedReader(new FileReader(file));
-        boolean hascode = false;
 
         final StringBuilder docsText = new StringBuilder();
         final StringBuilder codeText = new StringBuilder();
@@ -583,15 +586,13 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre><code class='prettyprint'>                if (hascode) {
+							<pre><code class='prettyprint'>                if (codeText.length() > 0) {
                     save(docsText, codeText);
-                    hascode = false;
                     docsText.setLength(0);
                     codeText.setLength(0);
                 }
                 docsText.append(line).append("\n"); //$NON-NLS-1$
             } else {
-                hascode = true;
                 codeText.append(line).append("\n"); //$NON-NLS-1$
             }
         }
@@ -600,7 +601,8 @@ import freemarker.template.TemplateException;
     }
 
     private void save(final StringBuilder docsText, final StringBuilder codeText) {
-        listOfSections.add(new Section(docsText.toString(), codeText.toString()));
+        listOfSections
+                .add(new Section(docsText.toString(), codeText.toString()));
     }
 }
 </code></pre>						
@@ -1592,6 +1594,7 @@ import org.slf4j.LoggerFactory;
 	              			</div>
 							<p>/**
 * This class test the Jocco Test class.
+* 
 * @author Krilivye-Homestation
 */</p>
 
@@ -1602,7 +1605,8 @@ public class JoccoTest {
 
     private transient Jocco jocco;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(JoccoTest.class);
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(JoccoTest.class);
 
     private transient URL testFile;
 
@@ -1624,7 +1628,7 @@ public class JoccoTest {
 							<pre><code class='prettyprint'>    @Before
     public void setUp() {
         jocco = new Jocco();
-        testFile = getClass().getResource("test.html");
+        testFile = getClass().getResource("test.html"); //$NON-NLS-1$
     }
 
 </code></pre>						
@@ -1671,8 +1675,9 @@ public class JoccoTest {
 							<pre><code class='prettyprint'>    @Test
     public void testSetFilesWithAValidFileName() {
 
-        jocco.setFiles(testFile.getPath()); //$NON-NLS-1$
-        Assert.assertTrue(jocco.getFiles().contains(new File(testFile.getPath())));
+        jocco.setFiles(testFile.getPath());
+        Assert.assertTrue(jocco.getFiles().contains(
+                new File(testFile.getPath())));
 
     }
 
@@ -1720,7 +1725,7 @@ public class JoccoTest {
 							<pre><code class='prettyprint'>    @Test
     public void testGenerateDoc() {
 
-        jocco.setFiles(testFile.getPath()); //$NON-NLS-1$
+        jocco.setFiles(testFile.getPath());
 
         try {
             final boolean execute = jocco.generateDoc();
