@@ -86,7 +86,7 @@ public class JoccoTest {
             Assert.assertTrue(execute);
         } catch (final Exception e) {
             // Hardware IO may Occur
-            LOGGER.error(e.getMessage());
+            LOGGER.error(e.toString());
             fail();
         }
 

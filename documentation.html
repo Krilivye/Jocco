@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-eqiv='content-type' content='text/html;charset=utf-8'>
-    <title>$1</title>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>Jocco Doccumentation</title>
     <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+	<link href="google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
 </head>
-<body>
+<body onload="prettyPrint()">
 <div id=container>
     <div id=background></div>
         <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>DocumentationModel.java</h1></th>
+        <th class=docs><h1>DocumentationModel</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModel_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import java.util.Collection;
 import java.util.LinkedList;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModel_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * @author p.bousquie
 */</p>
 
 						</td>
 						<td class="code">
-							<pre>public class DocumentationModel {
+							<pre><code class='prettyprint'>public class DocumentationModel {
 
     private transient Collection<FileModel> listOfFileModel = new LinkedList<FileModel>();
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModel_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return a collection of fileModel representing the files documented
  */
@@ -53,15 +64,18 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public Collection<FileModel> getListOfFileModel() {
+							<pre><code class='prettyprint'>    public Collection<FileModel> getListOfFileModel() {
         return listOfFileModel;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModel_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param listOfFileModel
  */
@@ -69,16 +83,19 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public void setListOfFileModels(final Collection<FileModel> listOfFileModel) {
+							<pre><code class='prettyprint'>    public void setListOfFileModels(final Collection<FileModel> listOfFileModel) {
         this.listOfFileModel = listOfFileModel;
 
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModel_section_5">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param file
  */
@@ -86,16 +103,19 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public void add(final FileModel file) {
+							<pre><code class='prettyprint'>    public void add(final FileModel file) {
         listOfFileModel.add(file);
 
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModel_section_6">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param file
  * @return true if the DocumentationModel contain a file.
@@ -104,12 +124,12 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public boolean contains(final FileModel file) {
+							<pre><code class='prettyprint'>    public boolean contains(final FileModel file) {
         return listOfFileModel.contains(file);
     }
 
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -117,39 +137,48 @@ import java.util.LinkedList;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>FileModel.java</h1></th>
+        <th class=docs><h1>FileModel</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import java.util.Collection;
 import java.util.LinkedList;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * @author p.bousquie
 */</p>
 
 						</td>
 						<td class="code">
-							<pre>public class FileModel {
+							<pre><code class='prettyprint'>public class FileModel {
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Files without name shall have a default name
  */
@@ -157,12 +186,15 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public static final String DEFAULT_NAME = ""; //$NON-NLS-1$
-</pre>						
+							<pre><code class='prettyprint'>    public static final String DEFAULT_NAME = ""; //$NON-NLS-1$
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Files without extensions shall have a default extension
  */
@@ -170,17 +202,20 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public static final String DEFAULT_EXTENSION = ""; //$NON-NLS-1$
+							<pre><code class='prettyprint'>    public static final String DEFAULT_EXTENSION = ""; //$NON-NLS-1$
 
     private String name = DEFAULT_NAME;
     private String extension = DEFAULT_EXTENSION;
     private Collection<Section> listOfSections = new LinkedList<Section>();
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_5">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param name
  */
@@ -188,15 +223,18 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public void setName(final String name) {
+							<pre><code class='prettyprint'>    public void setName(final String name) {
         this.name = name;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_6">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return the name of the parsed file or a default blank name
  */
@@ -204,15 +242,18 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public String getName() {
+							<pre><code class='prettyprint'>    public String getName() {
         return name;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_7">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param extension
  */
@@ -220,15 +261,18 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public void setExtension(final String extension) {
+							<pre><code class='prettyprint'>    public void setExtension(final String extension) {
         this.extension = extension;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_8">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return the extension of the parsed file or a default blank extension
  */
@@ -236,15 +280,18 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public String getExtension() {
+							<pre><code class='prettyprint'>    public String getExtension() {
         return extension;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_9">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param listOfSections
  */
@@ -252,16 +299,19 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public void setListOfSections(final Collection<Section> listOfSections) {
+							<pre><code class='prettyprint'>    public void setListOfSections(final Collection<Section> listOfSections) {
         this.listOfSections = listOfSections;
 
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModel_section_10">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return a collection of section of the parsed file
  */
@@ -269,12 +319,12 @@ import java.util.LinkedList;
 
 						</td>
 						<td class="code">
-							<pre>    public Collection<Section> getListOfSections() {
+							<pre><code class='prettyprint'>    public Collection<Section> getListOfSections() {
         return listOfSections;
     }
 
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -282,17 +332,20 @@ import java.util.LinkedList;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>Jocco.java</h1></th>
+        <th class=docs><h1>Jocco</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Jocco_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -315,18 +368,21 @@ import org.tautua.markdownpapers.parser.ParseException;
 
 import freemarker.template.TemplateException;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Jocco_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * @author Krilivye-Homestation This is the Jocco main class.
 */</p>
 
 						</td>
 						<td class="code">
-							<pre>public class Jocco {
+							<pre><code class='prettyprint'>public class Jocco {
 
     private transient List<File> files;
     private transient List<Section> listOfSections;
@@ -334,11 +390,14 @@ import freemarker.template.TemplateException;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Jocco.class);
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Jocco_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * For Test interface.
  */
@@ -346,15 +405,18 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre>    public Jocco() {
+							<pre><code class='prettyprint'>    public Jocco() {
         files = new ArrayList<File>();
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Jocco_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param dirOrFile
  */
@@ -362,7 +424,7 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre>    public Jocco(final String dirOrFile) {
+							<pre><code class='prettyprint'>    public Jocco(final String dirOrFile) {
         validate(dirOrFile);
     }
 
@@ -394,11 +456,14 @@ import freemarker.template.TemplateException;
 
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Jocco_section_5">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return a list of files
  */
@@ -406,15 +471,18 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre>    public List<File> getFiles() {
+							<pre><code class='prettyprint'>    public List<File> getFiles() {
         return files;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Jocco_section_6">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * This setter does not permit null value
  * @param fileOrDir
@@ -424,7 +492,7 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre>    public void setFiles(final String fileOrDir) {
+							<pre><code class='prettyprint'>    public void setFiles(final String fileOrDir) {
         if (fileOrDir == null) {
             throw new IllegalArgumentException(Messages.getString("Program.main.null")); //$NON-NLS-1$
         }
@@ -432,11 +500,14 @@ import freemarker.template.TemplateException;
 
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Jocco_section_7">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return true if the process's have been correctly executed, false
  * otherwise.
@@ -447,7 +518,7 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre>    public boolean generateDoc() throws IOException, TemplateException {
+							<pre><code class='prettyprint'>    public boolean generateDoc() throws IOException, TemplateException {
         final Writer fileout = new FileWriter(new File("documentation.html")); //$NON-NLS-1$
         final Template template = new Template();
         final DocumentationModel docmodel = new DocumentationModel();
@@ -456,8 +527,8 @@ import freemarker.template.TemplateException;
             final List<Section> sections = parseFile(file);
             markDownHiglight(sections);
             model.setListOfSections(sections);
-            model.setName(file.getName());
-            model.setExtension(file.getName());
+            model.setName(file.getName().split("\\.")[0]);
+            model.setExtension(file.getName().split("\\.")[1]);
 
             docmodel.add(model);
 
@@ -472,7 +543,7 @@ import freemarker.template.TemplateException;
 
         for (final Section section : sections) {
             transformDoc(section);
-            section.setCodeHTML("<pre>" + section.getCode() + "</pre>"); //$NON-NLS-1$ //$NON-NLS-2$
+            section.setCodeHTML("<pre><code class='prettyprint'>" + section.getCode() + "</code></pre>"); //$NON-NLS-1$ //$NON-NLS-2$
 
         }
 
@@ -499,17 +570,20 @@ import freemarker.template.TemplateException;
 
         String line;
         while (null != (line = input.readLine())) {
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Jocco_section_8">&#182;</a>
+	              			</div>
 							<pre><code>        if (line.contains(&quot;*&quot;) || line.contains(&quot;////&quot;)) { //$NON-NLS-1$ //$NON-NLS-2$
 </code></pre>
 
 						</td>
 						<td class="code">
-							<pre>                if (hascode) {
+							<pre><code class='prettyprint'>                if (hascode) {
                     save(docsText, codeText);
                     hascode = false;
                     docsText.setLength(0);
@@ -529,7 +603,7 @@ import freemarker.template.TemplateException;
         listOfSections.add(new Section(docsText.toString(), codeText.toString()));
     }
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -537,26 +611,32 @@ import freemarker.template.TemplateException;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>Messages.java</h1></th>
+        <th class=docs><h1>Messages</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Messages_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Messages_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * The generated message classes
 * @author Krilivye-Homestation
@@ -564,7 +644,7 @@ import java.util.ResourceBundle;
 
 						</td>
 						<td class="code">
-							<pre>public final class Messages {
+							<pre><code class='prettyprint'>public final class Messages {
 
     private static final String BUNDLE_NAME = "net.krilivye.jocco.Messages"; //$NON-NLS-1$
 
@@ -573,11 +653,14 @@ import java.util.ResourceBundle;
     private Messages() {
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Messages_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param key
  * a key string present in messages.properties
@@ -587,7 +670,7 @@ import java.util.ResourceBundle;
 
 						</td>
 						<td class="code">
-							<pre>    public static String getString(final String key) {
+							<pre><code class='prettyprint'>    public static String getString(final String key) {
         try {
             return RESOURCE_BUNDLE.getString(key);
         } catch (final MissingResourceException e) {
@@ -595,7 +678,7 @@ import java.util.ResourceBundle;
         }
     }
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -603,26 +686,32 @@ import java.util.ResourceBundle;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>Program.java</h1></th>
+        <th class=docs><h1>Program</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Program_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Program_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * This is the programe launcher.
 * @author Krilivye-Homestation
@@ -630,13 +719,16 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>public final class Program {
+							<pre><code class='prettyprint'>public final class Program {
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Program_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Inner for testing purpose.
  */
@@ -644,7 +736,7 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>    public static final Jocco JOCCO = new Jocco();
+							<pre><code class='prettyprint'>    public static final Jocco JOCCO = new Jocco();
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Program.class);
 
@@ -652,11 +744,14 @@ import org.slf4j.LoggerFactory;
         // No one can instantiate this class.
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Program_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param args
  * command line arguments should be a file name or a directory
@@ -667,7 +762,7 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>    public static void main(final String[] args) throws IllegalArgumentException {
+							<pre><code class='prettyprint'>    public static void main(final String[] args) throws IllegalArgumentException {
         if (args == null || args.length == 0) {
             throw new IllegalArgumentException(Messages.getString("Program.main.null")); //$NON-NLS-1$
         }
@@ -684,7 +779,7 @@ import org.slf4j.LoggerFactory;
 
     }
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -692,23 +787,29 @@ import org.slf4j.LoggerFactory;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>Section.java</h1></th>
+        <th class=docs><h1>Section</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Section_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Section_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * A Jocco section consiste of a documentation comment and its relative code.
 * After parsing the code is converted to HTML
@@ -719,18 +820,21 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>public class Section {
+							<pre><code class='prettyprint'>public class Section {
 
     private final transient String doc;
     private final transient String code;
     private String docHTML;
     private String codeHTML;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Section_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param docText the comment 
  * @param docCode the code
@@ -739,16 +843,19 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>    public Section(final String docText, final String docCode) {
+							<pre><code class='prettyprint'>    public Section(final String docText, final String docCode) {
         doc = docText;
         code = docCode;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Section_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return the original file comment
  */
@@ -756,15 +863,18 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>    public final String getDoc() {
+							<pre><code class='prettyprint'>    public final String getDoc() {
         return doc;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Section_section_5">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param string the formated documentation
  */
@@ -772,16 +882,19 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>    public final void setDocHTML(final String string) {
+							<pre><code class='prettyprint'>    public final void setDocHTML(final String string) {
         docHTML = string;
 
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Section_section_6">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return the original code
  */
@@ -789,15 +902,18 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>    public final String getCode() {
+							<pre><code class='prettyprint'>    public final String getCode() {
         return code;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Section_section_7">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param string the formated code.
  */
@@ -805,16 +921,19 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>    public final void setCodeHTML(final String string) {
+							<pre><code class='prettyprint'>    public final void setCodeHTML(final String string) {
         codeHTML = string;
 
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Section_section_8">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return the comment converted to html markup
  */
@@ -822,15 +941,18 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>    public final String getDocHTML() {
+							<pre><code class='prettyprint'>    public final String getDocHTML() {
         return docHTML;
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Section_section_9">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @return the code converted to html markup
  */
@@ -838,12 +960,12 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>    public final String getCodeHTML() {
+							<pre><code class='prettyprint'>    public final String getCodeHTML() {
         return codeHTML;
     }
 
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -851,17 +973,20 @@ import org.slf4j.LoggerFactory;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>Template.java</h1></th>
+        <th class=docs><h1>Template</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Template_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import java.io.File;
 import java.io.IOException;
@@ -876,24 +1001,30 @@ import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.SimpleHash;
 import freemarker.template.TemplateException;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Template_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * @author Krilivye-Homestation
 */</p>
 
 						</td>
 						<td class="code">
-							<pre>public class Template {
+							<pre><code class='prettyprint'>public class Template {
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Template_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * The configuration directory of the template library.
  */
@@ -901,12 +1032,15 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre>    private final transient Configuration cfg = new Configuration();
-</pre>						
+							<pre><code class='prettyprint'>    private final transient Configuration cfg = new Configuration();
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Template_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * The root element of the documentation template.
  */
@@ -914,13 +1048,16 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre>    private final transient SimpleHash root = new SimpleHash();
+							<pre><code class='prettyprint'>    private final transient SimpleHash root = new SimpleHash();
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Template_section_5">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * The template constructor load the default configuration directory.
  */
@@ -928,7 +1065,7 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre>    public Template() {
+							<pre><code class='prettyprint'>    public Template() {
 
         // Specify the data source where the template files come from.
         // Here I set a file directory for it:
@@ -944,11 +1081,14 @@ import freemarker.template.TemplateException;
         cfg.setObjectWrapper(new DefaultObjectWrapper());
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Template_section_6">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * @param model
  * a documentation model that will fill the template.
@@ -962,7 +1102,7 @@ import freemarker.template.TemplateException;
 
 						</td>
 						<td class="code">
-							<pre>    public final String fillTemplate(final DocumentationModel model) throws TemplateException, IOException {
+							<pre><code class='prettyprint'>    public final String fillTemplate(final DocumentationModel model) throws TemplateException, IOException {
         final freemarker.template.Template temp = cfg.getTemplate("jocco.ftl"); //$NON-NLS-1$
 
         // expose a "simple" java objects:
@@ -974,7 +1114,7 @@ import freemarker.template.TemplateException;
     }
 
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -982,24 +1122,29 @@ import freemarker.template.TemplateException;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>jocco.ftl</h1></th>
+        <th class=docs><h1>jocco</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#jocco_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre><!DOCTYPE html>
+							<pre><code class='prettyprint'><!DOCTYPE html>
 <html>
 <head>
-    <meta http-eqiv='content-type' content='text/html;charset=utf-8'>
-    <title>$1</title>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>Jocco Doccumentation</title>
     <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+	<link href="google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
 </head>
-<body>
+<body onload="prettyPrint()">
 <div id=container>
     <div id=background></div>
     <#list theList as alist>
@@ -1014,6 +1159,9 @@ import freemarker.template.TemplateException;
     		<#list alist.listOfSections as sections>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#${alist.name}_section_${sections_index + 1}">&#182;</a>
+	              			</div>
 							${sections.docHTML}
 						</td>
 						<td class="code">
@@ -1027,7 +1175,7 @@ import freemarker.template.TemplateException;
 </div>
 </body>
 </html>
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -1035,20 +1183,23 @@ import freemarker.template.TemplateException;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>Messages.properties</h1></th>
+        <th class=docs><h1>Messages</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#Messages_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>Program.main.null=You must provide a first a file or directory
+							<pre><code class='prettyprint'>Program.main.null=You must provide a first a file or directory
 Program.main.illegal=You must provide a valid source file
 Program.main.tooMuchArgument=You can only provide a dir or file name
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -1056,17 +1207,20 @@ Program.main.tooMuchArgument=You can only provide a dir or file name
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>DocumentationModelTest.java</h1></th>
+        <th class=docs><h1>DocumentationModelTest</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModelTest_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import java.util.Collections;
 
@@ -1076,11 +1230,14 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModelTest_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * The documentation model consist of a list of file model. You can only add
 * file to the model.
@@ -1091,15 +1248,18 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>public class DocumentationModelTest {
+							<pre><code class='prettyprint'>public class DocumentationModelTest {
 
     private transient DocumentationModel docmodel;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModelTest_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Prepare the model to test
  */
@@ -1107,16 +1267,19 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Before
+							<pre><code class='prettyprint'>    @Before
     public void setUp() {
 	docmodel = new DocumentationModel();
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModelTest_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test that the documentation model contains a default empty list of file
  * model
@@ -1125,17 +1288,20 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testListOfFileModel() {
 	Assert.assertEquals(Collections.emptyList(),
 	        docmodel.getListOfFileModel());
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#DocumentationModelTest_section_5">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test that we can add FileModel to the list of file model
  */
@@ -1143,14 +1309,14 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testAddFileModel() {
 	final FileModel file = new FileModel();
 	docmodel.add(file);
 	Assert.assertTrue(docmodel.contains(file));
     }
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -1158,17 +1324,20 @@ import org.junit.Test;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>FileModelTest.java</h1></th>
+        <th class=docs><h1>FileModelTest</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModelTest_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -1178,11 +1347,14 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModelTest_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * The file model should provide the name of the file, the extension and a list
 * of sections containing both code and comment.
@@ -1193,17 +1365,20 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>public class FileModelTest {
+							<pre><code class='prettyprint'>public class FileModelTest {
 
     private transient FileModel filemodel;
     private transient String fileName;
     private transient String extension;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModelTest_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Initialize the filemodel class for testing purpose.
  */
@@ -1211,16 +1386,19 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Before
+							<pre><code class='prettyprint'>    @Before
     public void setUp() {
 	filemodel = new FileModel();
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModelTest_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test that we can set and get the name of the file
  */
@@ -1228,7 +1406,7 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testSetName() {
 	fileName = "FileName"; //$NON-NLS-1$
 	// Act
@@ -1237,11 +1415,14 @@ import org.junit.Test;
 	Assert.assertEquals(fileName, filemodel.getName());
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModelTest_section_5">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test that the fileModel has an extension
  */
@@ -1249,7 +1430,7 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testSetExtension() {
 	extension = "js"; //$NON-NLS-1$
 	// Act
@@ -1258,11 +1439,14 @@ import org.junit.Test;
 	Assert.assertEquals(extension, filemodel.getExtension());
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModelTest_section_6">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test that the fileModel has a collection of sections.
  */
@@ -1270,7 +1454,7 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testSetSections() {
 	// Arrange
 	final Collection<Section> col = new LinkedList<Section>();
@@ -1280,11 +1464,14 @@ import org.junit.Test;
 	Assert.assertEquals(col, filemodel.getListOfSections());
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModelTest_section_7">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test that fileModel assure that it has a default name
  */
@@ -1292,7 +1479,7 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testGetName() {
 	// Arrange
 	final String defaultname = FileModel.DEFAULT_NAME;
@@ -1304,11 +1491,14 @@ import org.junit.Test;
 	Assert.assertEquals(defaultname, fileName);
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModelTest_section_8">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test that {@link FileModel} assure that it has a default extension
  */
@@ -1316,7 +1506,7 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testGetExtension() {
 	// Arrange
 	final String defaultExtension = FileModel.DEFAULT_EXTENSION;
@@ -1328,11 +1518,14 @@ import org.junit.Test;
 	Assert.assertEquals(defaultExtension, extension);
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#FileModelTest_section_9">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test that {@link FileModel} assure that it has a default empty collection
  * of sections
@@ -1341,7 +1534,7 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testGetSections() {
 	// Arrange
 	final Collection<Section> emptycol = Collections.emptyList();
@@ -1354,7 +1547,7 @@ import org.junit.Test;
     }
 
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -1362,17 +1555,20 @@ import org.junit.Test;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>JoccoTest.java</h1></th>
+        <th class=docs><h1>JoccoTest</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#JoccoTest_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import static org.junit.Assert.fail;
 
@@ -1386,11 +1582,14 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#JoccoTest_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * This class test the Jocco Test class.
 * @author Krilivye-Homestation
@@ -1398,7 +1597,7 @@ import org.slf4j.LoggerFactory;
 
 						</td>
 						<td class="code">
-							<pre>
+							<pre><code class='prettyprint'>
 public class JoccoTest {
 
     private transient Jocco jocco;
@@ -1407,11 +1606,14 @@ public class JoccoTest {
 
     private transient URL testFile;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#JoccoTest_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * 
  */
@@ -1419,17 +1621,20 @@ public class JoccoTest {
 
 						</td>
 						<td class="code">
-							<pre>    @Before
+							<pre><code class='prettyprint'>    @Before
     public void setUp() {
         jocco = new Jocco();
         testFile = getClass().getResource("test.html");
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#JoccoTest_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * 
  */
@@ -1437,7 +1642,7 @@ public class JoccoTest {
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testSetFilesWithNull() {
         try {
             jocco.setFiles(null);
@@ -1448,11 +1653,14 @@ public class JoccoTest {
         }
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#JoccoTest_section_5">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test the setter with correct argument
  */
@@ -1460,7 +1668,7 @@ public class JoccoTest {
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testSetFilesWithAValidFileName() {
 
         jocco.setFiles(testFile.getPath()); //$NON-NLS-1$
@@ -1468,11 +1676,14 @@ public class JoccoTest {
 
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#JoccoTest_section_6">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test si l'appel du programme avec un non de fichier valable se termine
  * bien
@@ -1481,7 +1692,7 @@ public class JoccoTest {
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testSetFilesWithAValidDirectory() {
         try {
             jocco.setFiles("src"); //$NON-NLS-1$
@@ -1491,11 +1702,14 @@ public class JoccoTest {
         }
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#JoccoTest_section_7">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test the documentation generation
  */
@@ -1503,7 +1717,7 @@ public class JoccoTest {
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testGenerateDoc() {
 
         jocco.setFiles(testFile.getPath()); //$NON-NLS-1$
@@ -1513,13 +1727,13 @@ public class JoccoTest {
             Assert.assertTrue(execute);
         } catch (final Exception e) {
             // Hardware IO may Occur
-            LOGGER.error(e.getMessage());
+            LOGGER.error(e.toString());
             fail();
         }
 
     }
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -1527,28 +1741,34 @@ public class JoccoTest {
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>ProgramTest.java</h1></th>
+        <th class=docs><h1>ProgramTest</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#ProgramTest_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>package net.krilivye.jocco;
+							<pre><code class='prettyprint'>package net.krilivye.jocco;
 
 import static org.junit.Assert.fail;
 import junit.framework.Assert;
 
 import org.junit.Test;
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#ProgramTest_section_2">&#182;</a>
+	              			</div>
 							<p>/**
 * Test de la classe program.
 * 
@@ -1557,16 +1777,19 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>public class ProgramTest {
+							<pre><code class='prettyprint'>public class ProgramTest {
 
     private static final String[] TEST = new String[] {
             "NonValid", "encore moins" }; //$NON-NLS-1$ //$NON-NLS-2$
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#ProgramTest_section_3">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test si l'appel du programme sans argument est valable.
  */
@@ -1574,7 +1797,7 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testMainWithNull() {
         try {
             Program.main(new String[] {});
@@ -1585,11 +1808,14 @@ import org.junit.Test;
         }
     }
 
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#ProgramTest_section_4">&#182;</a>
+	              			</div>
 							<pre><code>/**
  * Test si l'appel du programme avec trops d'arguments est valable.
  */
@@ -1597,7 +1823,7 @@ import org.junit.Test;
 
 						</td>
 						<td class="code">
-							<pre>    @Test
+							<pre><code class='prettyprint'>    @Test
     public void testMainWithTooMuchArguments() {
         try {
             Program.main(TEST);
@@ -1610,7 +1836,7 @@ import org.junit.Test;
     }
 
 }
-</pre>						
+</code></pre>						
 						</td>
 				</tr>
     </tbody>
@@ -1618,18 +1844,21 @@ import org.junit.Test;
     <table cellspacing=0 cellpadding=0>
     <thead>
       <tr>
-        <th class=docs><h1>test.html</h1></th>
+        <th class=docs><h1>test</h1></th>
         <th class=code></th>
       </tr>
     </thead>
     <tbody>
 				<tr>
 						<td class="docs">
+							<div class="pilwrap">
+	                			<a class="pilcrow" href="#test_section_1">&#182;</a>
+	              			</div>
 							
 						</td>
 						<td class="code">
-							<pre>//Test 
-</pre>						
+							<pre><code class='prettyprint'>//Test 
+</code></pre>						
 						</td>
 				</tr>
     </tbody>

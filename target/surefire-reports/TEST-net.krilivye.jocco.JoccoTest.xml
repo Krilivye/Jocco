@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.279" errors="0" skipped="0" tests="4" name="net.krilivye.jocco.JoccoTest">
+<testsuite failures="1" time="0.19" errors="0" skipped="0" tests="4" name="net.krilivye.jocco.JoccoTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_18\jre\bin"/>
@@ -25,7 +25,7 @@
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="D:\V3\.metadata\.plugins\org.eclipse.m2e.core\launches\m2conf6218612999862806637.tmp"/>
+    <property name="classworlds.conf" value="D:\V3\.metadata\.plugins\org.eclipse.m2e.core\launches\m2conf597165474263008574.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_18\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.6.0_18\bin;C:\Program Files\Java\jdk1.6.0_18\lib;D:\apache-ant-1.8.2\bin;C:\app\oracle\product\11.2.0\dbhome_1\bin;C:\app\p.bousquie\product\11.2.0\dbhome_1\bin;C:\app\p.bousquie\product\11.2.0\client_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files (x86)\PuTTY;C:\Program Files (x86)\Java\jdk1.6.0_18\bin;D:\apache-ant-1.8.2\bin;C:\Program Files (x86)\Subversion\bin;C:\Program Files (x86)\cvsnt;D:\apache-ant-1.8.2\bin;C:\Program Files (x86)\Lectra\Gs;C:\Program Files (x86)\WinMerge;D:\apache-maven-3.0.4\bin;C:\Program Files (x86)\Git\cmd;D:\gradle-1.0-milestone-8a\bin;C:\Program Files (x86)\GNU\GnuPG\pub"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -58,8 +58,45 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.107" classname="net.krilivye.jocco.JoccoTest" name="testSetFilesWithNull"/>
+  <testcase time="0.085" classname="net.krilivye.jocco.JoccoTest" name="testSetFilesWithNull"/>
   <testcase time="0" classname="net.krilivye.jocco.JoccoTest" name="testSetFilesWithAValidFileName"/>
-  <testcase time="0" classname="net.krilivye.jocco.JoccoTest" name="testSetFilesWithAValidDirectory"/>
-  <testcase time="0.17" classname="net.krilivye.jocco.JoccoTest" name="testGenerateDoc"/>
+  <testcase time="0.002" classname="net.krilivye.jocco.JoccoTest" name="testSetFilesWithAValidDirectory"/>
+  <testcase time="0.098" classname="net.krilivye.jocco.JoccoTest" name="testGenerateDoc">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: 
+	at org.junit.Assert.fail(Assert.java:91)
+	at org.junit.Assert.fail(Assert.java:98)
+	at net.krilivye.jocco.JoccoTest.testGenerateDoc(JoccoTest.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</failure>
+    <system-out>13:27:39.803 [main] ERROR net.krilivye.jocco.JoccoTest - 0
+</system-out>
+  </testcase>
 </testsuite>

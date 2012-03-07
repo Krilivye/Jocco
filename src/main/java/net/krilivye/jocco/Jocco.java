@@ -109,8 +109,8 @@ public class Jocco {
             final List<Section> sections = parseFile(file);
             markDownHiglight(sections);
             model.setListOfSections(sections);
-            model.setName(file.getName());
-            model.setExtension(file.getName());
+            model.setName(file.getName().split("\\.")[0]);
+            model.setExtension(file.getName().split("\\.")[1]);
 
             docmodel.add(model);
 
@@ -125,7 +125,7 @@ public class Jocco {
 
         for (final Section section : sections) {
             transformDoc(section);
-            section.setCodeHTML("<pre>" + section.getCode() + "</pre>"); //$NON-NLS-1$ //$NON-NLS-2$
+            section.setCodeHTML("<pre><code class='prettyprint'>" + section.getCode() + "</code></pre>"); //$NON-NLS-1$ //$NON-NLS-2$
 
         }
 
