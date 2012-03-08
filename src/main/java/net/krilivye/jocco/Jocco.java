@@ -105,20 +105,23 @@ public class Jocco {
         final Template template = new Template();
         final DocumentationModel docmodel = new DocumentationModel();
         for (final File file : files) {
-            final FileModel model = new FileModel();
-            final List<Section> sections = parseFile(file);
-            markDownHiglight(sections);
-            model.setListOfSections(sections);
-            model.setName(file.getName().split("\\.")[0]);
-            model.setExtension(file.getName().split("\\.")[1]);
-
+            final FileModel model = generateFileModel(file);
             docmodel.add(model);
-
         }
         fileout.write(template.fillTemplate(docmodel));
         fileout.close();
 
         return true;
+    }
+
+    private FileModel generateFileModel(final File file) throws FileNotFoundException, IOException {
+        final FileModel model = new FileModel();
+        final List<Section> sections = parseFile(file);
+        markDownHiglight(sections);
+        model.setListOfSections(sections);
+        model.setName(file.getName().split("\\.")[0]);
+        model.setExtension(file.getName().split("\\.")[1]);
+        return model;
     }
 
     private void markDownHiglight(final List<Section> sections) {
@@ -145,25 +148,23 @@ public class Jocco {
     private List<Section> parseFile(final File file) throws FileNotFoundException, IOException {
         listOfSections = new LinkedList<Section>();
         final BufferedReader input = new BufferedReader(new FileReader(file));
-        boolean hascode = false;
 
         final StringBuilder docsText = new StringBuilder();
         final StringBuilder codeText = new StringBuilder();
 
-        String line;
-        while (null != (line = input.readLine())) {
+        String line = input.readLine();
+        while (null != line) {
             if (line.contains("*") || line.contains("////")) { //$NON-NLS-1$ //$NON-NLS-2$
-                if (hascode) {
+                if (codeText.length() > 0) {
                     save(docsText, codeText);
-                    hascode = false;
                     docsText.setLength(0);
                     codeText.setLength(0);
                 }
                 docsText.append(line).append("\n"); //$NON-NLS-1$
             } else {
-                hascode = true;
                 codeText.append(line).append("\n"); //$NON-NLS-1$
             }
+            line = input.readLine();
         }
         save(docsText, codeText);
         return listOfSections;
