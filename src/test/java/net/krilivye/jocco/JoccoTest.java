@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * This class test the Jocco Test class.
+ * 
  * @author Krilivye-Homestation
  */
 
@@ -21,7 +22,8 @@ public class JoccoTest {
 
     private transient Jocco jocco;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(JoccoTest.class);
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(JoccoTest.class);
 
     private transient URL testFile;
 
@@ -31,7 +33,7 @@ public class JoccoTest {
     @Before
     public void setUp() {
         jocco = new Jocco();
-        testFile = getClass().getResource("test.html");
+        testFile = getClass().getResource("test.html"); //$NON-NLS-1$
     }
 
     /**
@@ -54,8 +56,9 @@ public class JoccoTest {
     @Test
     public void testSetFilesWithAValidFileName() {
 
-        jocco.setFiles(testFile.getPath()); //$NON-NLS-1$
-        Assert.assertTrue(jocco.getFiles().contains(new File(testFile.getPath())));
+        jocco.setFiles(testFile.getPath());
+        Assert.assertTrue(jocco.getFiles().contains(
+                new File(testFile.getPath())));
 
     }
 
@@ -79,7 +82,7 @@ public class JoccoTest {
     @Test
     public void testGenerateDoc() {
 
-        jocco.setFiles(testFile.getPath()); //$NON-NLS-1$
+        jocco.setFiles(testFile.getPath());
 
         try {
             final boolean execute = jocco.generateDoc();

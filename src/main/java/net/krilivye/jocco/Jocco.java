@@ -55,7 +55,8 @@ public class Jocco {
             files = new LinkedList<File>();
             addFiles(files, file);
         } else {
-            throw new IllegalArgumentException(Messages.getString("Program.main.illegal")); //$NON-NLS-1$
+            throw new IllegalArgumentException(
+                    Messages.getString("Program.main.illegal")); //$NON-NLS-1$
         }
     }
 
@@ -83,12 +84,14 @@ public class Jocco {
 
     /**
      * This setter does not permit null value
+     * 
      * @param fileOrDir
-     * a file or a dir name
+     *            a file or a dir name
      */
     public void setFiles(final String fileOrDir) {
         if (fileOrDir == null) {
-            throw new IllegalArgumentException(Messages.getString("Program.main.null")); //$NON-NLS-1$
+            throw new IllegalArgumentException(
+                    Messages.getString("Program.main.null")); //$NON-NLS-1$
         }
         validate(fileOrDir);
 
@@ -96,7 +99,7 @@ public class Jocco {
 
     /**
      * @return true if the process's have been correctly executed, false
-     * otherwise.
+     *         otherwise.
      * @throws IOException
      * @throws TemplateException
      */
@@ -105,23 +108,20 @@ public class Jocco {
         final Template template = new Template();
         final DocumentationModel docmodel = new DocumentationModel();
         for (final File file : files) {
-            final FileModel model = generateFileModel(file);
+            final FileModel model = new FileModel();
+            final List<Section> sections = parseFile(file);
+            markDownHiglight(sections);
+            model.setListOfSections(sections);
+            model.setName(file.getName().split("\\.")[0]); //$NON-NLS-1$
+            model.setExtension(file.getName().split("\\.")[1]); //$NON-NLS-1$
+
             docmodel.add(model);
+
         }
         fileout.write(template.fillTemplate(docmodel));
         fileout.close();
 
         return true;
-    }
-
-    private FileModel generateFileModel(final File file) throws FileNotFoundException, IOException {
-        final FileModel model = new FileModel();
-        final List<Section> sections = parseFile(file);
-        markDownHiglight(sections);
-        model.setListOfSections(sections);
-        model.setName(file.getName().split("\\.")[0]);
-        model.setExtension(file.getName().split("\\.")[1]);
-        return model;
     }
 
     private void markDownHiglight(final List<Section> sections) {
@@ -145,15 +145,16 @@ public class Jocco {
         }
     }
 
-    private List<Section> parseFile(final File file) throws FileNotFoundException, IOException {
+    private List<Section> parseFile(final File file)
+            throws FileNotFoundException, IOException {
         listOfSections = new LinkedList<Section>();
         final BufferedReader input = new BufferedReader(new FileReader(file));
 
         final StringBuilder docsText = new StringBuilder();
         final StringBuilder codeText = new StringBuilder();
 
-        String line = input.readLine();
-        while (null != line) {
+        String line;
+        while (null != (line = input.readLine())) {
             if (line.contains("*") || line.contains("////")) { //$NON-NLS-1$ //$NON-NLS-2$
                 if (codeText.length() > 0) {
                     save(docsText, codeText);
@@ -164,13 +165,13 @@ public class Jocco {
             } else {
                 codeText.append(line).append("\n"); //$NON-NLS-1$
             }
-            line = input.readLine();
         }
         save(docsText, codeText);
         return listOfSections;
     }
 
     private void save(final StringBuilder docsText, final StringBuilder codeText) {
-        listOfSections.add(new Section(docsText.toString(), codeText.toString()));
+        listOfSections
+                .add(new Section(docsText.toString(), codeText.toString()));
     }
 }
